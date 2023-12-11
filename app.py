@@ -18,7 +18,7 @@ def get_transactions():
 
 # Create operation
 @app.route('/add', methods = ['GET' , 'POST'])
-def add_transaction:
+def add_transaction():
    if request.method == 'POST':
       transaction = {
             'id': len(transactions) + 1,
