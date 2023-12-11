@@ -46,7 +46,7 @@ def edit_transaction(transaction_id):
 
    for trans in transactions:
       if trans["id"] == transaction_id:
-         return render_template("edit.html", transactions = transactions)
+         return render_template("edit.html", transaction = transaction)
 
 
 # Delete operation
