@@ -37,7 +37,7 @@ def edit_transaction(transaction_id):
       amount = float(request.form['amount'])
 
       for trans in transactions:
-         if trans['id'] = transaction_id:
+         if trans['id'] == transaction_id:
             trans['date'] = date
             trans['amount'] = amount
             break
@@ -45,7 +45,7 @@ def edit_transaction(transaction_id):
       return redirect(url_for("get_transactions"))
 
    for trans in transactions:
-      if trans['id'] = transaction_id:
+      if trans['id'] == transaction_id:
          return render_template('edit.html', transactions = transactions)
 
 
@@ -53,7 +53,7 @@ def edit_transaction(transaction_id):
 @app.route('/delete/<int: transaction_id>')
 def delete_transaction(transaction_id):
    for trans in transactions:
-      if trans['id'] = transaction_id:
+      if trans['id'] == transaction_id:
          transactions.remove(transaction)
          break
 
