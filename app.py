@@ -50,7 +50,7 @@ def edit_transaction(transaction_id):
 
 
 # Delete operation
-@app.route("/delete/<int: transaction_id>")
+@app.route("/delete/<int:transaction_id>")
 def delete_transaction(transaction_id):
    for trans in transactions:
       if trans["id"] == transaction_id:
