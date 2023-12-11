@@ -54,7 +54,7 @@ def edit_transaction(transaction_id):
 def delete_transaction(transaction_id):
    for trans in transactions:
       if trans["id"] == transaction_id:
-         transactions.remove(transaction)
+         transactions.remove(trans)
          break
 
    return redirect(url_for("get_transactions"))
